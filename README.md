@@ -41,6 +41,7 @@ The page design is responsive.
 The colour scheme used is based on the colours of cookies.
 
 The code is modularised in small blocks of code to make it easier to read and descriptive variables are used. 
+
 <br>
 
 ### Requirements acheived
