@@ -31,7 +31,7 @@ User stories were produced as a definition as to the scope of the project.
 
 Uses local data storage to save and retrieve game data. It was found that only item totals, cookie count and cookies per click were necessary items to store in an object. Local storage of item totals were not required by the the design brief, but were added anyway to improve recommencing the game. 
 
-When hovering the mouse over buttons , the colour of the background changes with a gradual transition.  
+When hovering the mouse over buttons , the cursor is set to a pointer and the colour of the background changes with a gradual transition.  
 
 Animation was added to make the cookie move when clicked (using a React timer).
 
@@ -40,6 +40,8 @@ Uses CSS grid functionality to display the inventory of items and statistics.
 The page design is responsive.
 
 The colour scheme used is based on the colours of cookies.
+
+The code is modularised in small blocks of code to make it easier to read and descriptive variables are used. 
 
 
 ### Requirements acheived
