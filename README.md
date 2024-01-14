@@ -4,9 +4,8 @@
 
 ### Task
 
-Create a simple interactive game as a fun distraction for the visitors to a company website.
+Create a simple interactive game as a fun distraction for the visitors to a company website in React.js.
 
-<br>
 <br>
 
 ### User stories
@@ -42,7 +41,7 @@ The page design is responsive.
 The colour scheme used is based on the colours of cookies.
 
 The code is modularised in small blocks of code to make it easier to read and descriptive variables are used. 
-
+<br>
 
 ### Requirements acheived
 
@@ -50,6 +49,7 @@ The code is modularised in small blocks of code to make it easier to read and de
 - Timer implemented to increment the number of cookies by the cookiesPerSecond value using useEffect() ; Timer clearss using the useEffect return value
 - An array of objects is used to contain the items available for purchase in the store, their cost and their increment increase value - These are mapped through and buttons are created for each
 - Functionality included to handle the purchase of an item ; This checks if the user has enough cookies to purchase the item, and if so, subtracts the cost of the item from the number of cookies and adds the increment value to the cookiesPerSecond value
+<br>
 
 ### Stretch goals
 
@@ -63,8 +63,12 @@ The suggested stretch goal was implemented.
 ### Extra features
 
 - Hand drawn images were created and scanned to use in the page
-- Functionality added to add a yellow circle to the background of the image, where the user can afford to purchase the item.
+- Functionality added to add a yellow circle to the background of the image, where the user can afford to purchase the item
 - Numbers on screen are formatted with commas as thousand separators
 - Instructions included at the bottom of the page
 - Reset button added to clear the page data and the data saved in local storage
 - Uses a data operations class to abstract away the statistics and operation of the user inventory and purchasing functionality ; This was done to separate concerns, make the code easier to read and reduce complexity
+
+A structure diagram is within the src/design folder.
+<br>
+D.Brien 2024
