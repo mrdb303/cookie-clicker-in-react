@@ -1,3 +1,5 @@
+// Main cookie image that is clicked to amass cookie numbers
+
 export default function CookieClick({setCookieClick, isCookieRegisteredAsClicked}){
 
   return (

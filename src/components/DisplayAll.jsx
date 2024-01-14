@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import CookieButton from "./ManufactureTypeButton.jsx";
 
 

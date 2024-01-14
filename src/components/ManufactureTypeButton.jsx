@@ -1,4 +1,4 @@
-import { useState } from 'react';
+// Button generated per item.
 
 export default function CookieButton( { idNum, logManufactureType, buttonLabel}){
 

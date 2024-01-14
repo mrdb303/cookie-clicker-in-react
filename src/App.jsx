@@ -137,7 +137,6 @@ export default function App() {
     setCookiesEarned(1);
     setCps(1);
     recordCookieClick(1);
-    //localStorage.clear();
     clearInterval(intervalID);
     localStorage.clear();
     dataOps.resetPurchases();
@@ -182,11 +181,13 @@ export default function App() {
         </div>
       </section>
         
+        {/* Cookie image on screen that is clicked */}
         <CookieClick 
           setCookieClick={setCookieClick} 
           isCookieRegisteredAsClicked={isCookieRegisteredAsClicked} 
           />
 
+        {/* All of the items that can potentially be purchased in the game */}
         <div id="products">
           <DisplayAll 
             manufactureData={manufactureData} 
