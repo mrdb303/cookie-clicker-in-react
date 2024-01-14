@@ -70,5 +70,5 @@ The suggested stretch goal was implemented.
 - Uses a data operations class to abstract away the statistics and operation of the user inventory and purchasing functionality ; This was done to separate concerns, make the code easier to read and reduce complexity
 
 A structure diagram is within the src/design folder.
-<br>
+<br><br>
 D.Brien 2024
