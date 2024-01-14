@@ -10,11 +10,11 @@ export default class DataOperations {
   constructor() {
    this.manufactureDataAll = [
        {id: 0, resource: "Grandma", price: 10, bonus: 1, image: "/granny.png", imaget: "/grannyt.png", buttonLabel: "Employ Grandma", selectable: false, number: 0},
-       {id: 1, resource: "Oven", price: 100, bonus: 10, image: "/oven.png", imaget: "/ovent.png", buttonLabel: "Buy Oven", selectable: false, number: 0},
-       {id: 2, resource: "Factory", price: 1000, bonus: 100, image: "/factory.png", imaget: "/factoryt.png", buttonLabel: "Buy Factory", selectable: false, number: 0},
-       {id: 3, resource: "Mine", price: 10000, bonus: 1000, image: "/mine.png", imaget: "/minet.png", buttonLabel: "Buy Mine", selectable: false, number: 0},
-       {id: 4, resource: "Bank", price: 100000, bonus: 10000, image: "/bank.png", imaget: "/bankt.png", buttonLabel: "Buy Bank", selectable: false, number: 0},
-       {id: 5, resource: "Big Factory", price: 300000, bonus: 30000, image: "/bigfactory.png", imaget: "/bigfactoryt.png", buttonLabel: "Buy Big Factory", selectable: false, number: 0}
+       {id: 1, resource: "Oven", price: 300, bonus: 30, image: "/oven.png", imaget: "/ovent.png", buttonLabel: "Buy Oven", selectable: false, number: 0},
+       {id: 2, resource: "Factory", price: 5000, bonus: 500, image: "/factory.png", imaget: "/factoryt.png", buttonLabel: "Buy Factory", selectable: false, number: 0},
+       {id: 3, resource: "Mine", price: 40000, bonus: 4000, image: "/mine.png", imaget: "/minet.png", buttonLabel: "Buy Mine", selectable: false, number: 0},
+       {id: 4, resource: "Bank", price: 250000, bonus: 25000, image: "/bank.png", imaget: "/bankt.png", buttonLabel: "Buy Bank", selectable: false, number: 0},
+       {id: 5, resource: "Big Factory", price: 500000, bonus: 50000, image: "/bigfactory.png", imaget: "/bigfactoryt.png", buttonLabel: "Buy Big Factory", selectable: false, number: 0}
      ];
 
      this.storeName = 'inventory';
@@ -104,6 +104,15 @@ export default class DataOperations {
 
   getCookieIncVal(){
     return this.cookieIncValue;
+  }
+
+
+  resetPurchases(){
+    this.numberOfObjects = this.objectLength(this.manufactureDataAll);
+
+    for(let counter = 0;counter < (this.numberOfObjects);counter++){
+      this.manufactureDataAll[counter].number = 0;
+    }
   }
 
 

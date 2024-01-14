@@ -15,6 +15,7 @@ export default function App() {
   let dataOps = new DataOperations();
 
   let manufactureDataAll = dataOps.getAllInventoryData();
+  let intervalID = 0;
   
   // All state variables and main inventory object state.
   const [cookiesEarned, setCookiesEarned] = useState(dataOps.getCookiesEarned());
@@ -22,6 +23,7 @@ export default function App() {
   const [cookieIncValue, recordCookieClick] = useState(dataOps.getCookieIncVal()); // change var name
   const [cookiesPerSec, setCps] = useState(1);
   const [isCookieRegisteredAsClicked, animateCookie] = useState(false);
+  const [helpMode, setHelpMode] = useState(true);
 
   
   
@@ -30,6 +32,8 @@ export default function App() {
     const cookieIncreaseInterval = setInterval(() => {
       setCookiesEarned((currentCookies) => currentCookies + cookieIncValue);
     }, 1000);
+
+    intervalID = cookieIncreaseInterval;
     
     // clean up
     return () => {
@@ -117,15 +121,15 @@ export default function App() {
     // its state.
 
    
-      //  const newState = manufactureData.map(obj => {
-      //    if(obj.price <= cookiesEarned) {
-      //      return {...obj, selectable: true};
-      //    } else {
-      //      return {...obj, selectable: false};
-      //   }
-      // });
-      // console.log(newState);
-      //  addManufactureType(newState);  // this should be correct (rest as anonymous)
+    const newState = manufactureData.map(obj => {
+      if(obj.price <= cookiesEarned) {
+          return {...obj, selectable: true};
+        } else {
+          return {...obj, selectable: false};
+        }
+      });
+      //console.log(newState);
+      addManufactureType(newState);  // this should be correct (rest as anonymous)
   }
 
 
@@ -133,9 +137,12 @@ export default function App() {
     setCookiesEarned(1);
     setCps(1);
     recordCookieClick(1);
-    addManufactureType(manufactureDataAll);
-    animateCookie(false);
+    //localStorage.clear();
+    clearInterval(intervalID);
     localStorage.clear();
+    dataOps.resetPurchases();
+    dataOps.setLocallyStoredObject();
+    addManufactureType(dataOps.getAllInventoryData());
   }
 
 
@@ -185,6 +192,7 @@ export default function App() {
             manufactureData={manufactureData} 
             logManufactureType={logManufactureType} 
             allManufactureTypeCounts={allManufactureTypeCounts}
+            helpMode={helpMode}
           />
         </div>
         <div className="clear"></div>
